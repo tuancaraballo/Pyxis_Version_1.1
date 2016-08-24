@@ -49,7 +49,7 @@ public class FetchWeatherService extends IntentService {
         if (Latitude == -1.0 || Longitude == -1.0) { // --> some error checking
             String errorMessage = "No Longitude or Latitude was provided";
             Log.wtf(TAG, errorMessage);
-            deliverResultToReceiver(Constants.FAILURE_RESULT,-1,-1,-1,errorMessage);
+            deliverResultToReceiver(Constants.FAILURE_RESULT,-1,-1,-1,errorMessage,errorMessage);
             return;
         }
 
